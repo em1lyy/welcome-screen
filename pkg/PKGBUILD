@@ -2,7 +2,7 @@
 
 pkgname=norcuxos-welcome-screen
 pkgver=0.1
-pkgrel=2
+pkgrel=3
 pkgdesc="The NorcuxOS Welcome Screen"
 arch=('any')
 url="https://github.com/NorcuxOS/welcome-screen"
@@ -18,7 +18,8 @@ validpgpkeys=()
 
 
 package() {
-    mkdir -p ${pkgdir}/usr/bin/ ${pkgdir}/usr/share/applications/
+    mkdir -p ${pkgdir}/usr/bin/ ${pkgdir}/usr/share/applications/ ${pkgdir}/etc/skel/.config/autostart/
     cp -r "${srcdir}/welcome-screen" "${pkgdir}/usr/bin/"
     cp -r "${srcdir}/welcome-screen-${pkgver}/welcome-screen.desktop" "${pkgdir}/usr/share/applications/"
+    cp -r "${srcdir}/welcome-screen-${pkgver}/welcome-screen.desktop" "${pkgdir}/etc/skel/.config/autostart/"
 }
