@@ -1,0 +1,12 @@
+[Desktop Entry]
+Categories=System;
+Comment=The Norcux OS Welcome Screen
+Exec=/usr/bin/welcome-screen
+GenericName=Welcome Screen
+Icon=org.kde.plasma.icontasks
+Name=Welcome Screen
+NoDisplay=false
+StartupNotify=true
+StartupWMClass=welcome-screen
+Terminal=false
+Type=Application

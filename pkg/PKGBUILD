@@ -1,0 +1,25 @@
+ # Maintainer: Norcux OS Team
+
+pkgname=norcuxos-welcome-screen
+pkgver=0.1
+pkgrel=1
+pkgdesc="The NorcuxOS Welcome Screen"
+arch=('any')
+url="https://github.com/NorcuxOS/welcome-screen"
+license=('GPL3')
+depends=('qt5-base' 'kio')
+#makedepends=()
+#checkdepends=()
+#optdepends=()
+#options=()
+source=("${url}/archive/$pkgver.tar.gz")
+md5sums=('SKIP')
+validpgpkeys=()
+
+
+package() {
+	cd  "${srcdir}/welcome-screen-${pkgver}/"
+	mkdir -p ${pkgdir}/usr/bin/ ${pkgdir}/usr/share/applications/
+	cp -r welcome-screen "${pkgdir}/usr/bin/"
+	cp -r welcome-screen.desktop "${pkgdir}/usr/share/applications/"
+}

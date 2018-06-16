@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>start-here-symbolic.png</file>
+        <file>software-store.png</file>
+        <file>driver-manager.png</file>
+        <file>systemsettings.png</file>
+        <file>system-software-update.png</file>
+        <file>discord.png</file>
+        <file>browser.png</file>
+        <file>youtube.png</file>
+    </qresource>
+</RCC>
