@@ -2,7 +2,7 @@
 
 pkgname=norcuxos-welcome-screen
 pkgver=0.1
-pkgrel=1
+pkgrel=2
 pkgdesc="The NorcuxOS Welcome Screen"
 arch=('any')
 url="https://github.com/NorcuxOS/welcome-screen"
@@ -12,14 +12,13 @@ depends=('qt5-base' 'kio')
 #checkdepends=()
 #optdepends=()
 #options=()
-source=("${url}/archive/$pkgver.tar.gz")
-md5sums=('SKIP')
+source=("${url}/archive/$pkgver.tar.gz" "${url}/releases/download/$pkgver/welcome-screen.tar.gz")
+md5sums=('SKIP' 'SKIP')
 validpgpkeys=()
 
 
 package() {
-	cd  "${srcdir}/welcome-screen-${pkgver}/"
 	mkdir -p ${pkgdir}/usr/bin/ ${pkgdir}/usr/share/applications/
-	cp -r welcome-screen "${pkgdir}/usr/bin/"
-	cp -r welcome-screen.desktop "${pkgdir}/usr/share/applications/"
+    cp -r "${srcdir}/welcome-screen" "${pkgdir}/usr/bin/"
+	cp -r "${srcdir}/welcome-screen-${pkgver}/welcome-screen.desktop" "${pkgdir}/usr/share/applications/"
 }
