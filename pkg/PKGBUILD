@@ -18,7 +18,7 @@ validpgpkeys=()
 
 
 package() {
-	mkdir -p ${pkgdir}/usr/bin/ ${pkgdir}/usr/share/applications/
+    mkdir -p ${pkgdir}/usr/bin/ ${pkgdir}/usr/share/applications/
     cp -r "${srcdir}/welcome-screen" "${pkgdir}/usr/bin/"
-	cp -r "${srcdir}/welcome-screen-${pkgver}/welcome-screen.desktop" "${pkgdir}/usr/share/applications/"
+    cp -r "${srcdir}/welcome-screen-${pkgver}/welcome-screen.desktop" "${pkgdir}/usr/share/applications/"
 }
