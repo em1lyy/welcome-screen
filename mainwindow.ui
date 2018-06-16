@@ -255,7 +255,7 @@
                </font>
               </property>
               <property name="text">
-               <string>Thank you for using Norcux OS.&lt;br/&gt;This program guides you through your first steps and&lt;br/&gt;will show you some features of the Operating System!&lt;br/&gt;&lt;br/&gt;Please choose a topic from the left side.</string>
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Thank you for using Norcux OS.&lt;br/&gt;This program will guide you through your first steps and&lt;br/&gt;will show you some features of the Operating System!&lt;br/&gt;&lt;br/&gt;Please choose a topic from the left side.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
@@ -389,7 +389,7 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>548</width>
+             <width>541</width>
              <height>623</height>
             </rect>
            </property>
@@ -887,8 +887,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>561</width>
-             <height>486</height>
+             <width>541</width>
+             <height>318</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_5">
