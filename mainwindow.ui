@@ -348,7 +348,7 @@
                </font>
               </property>
               <property name="text">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Thank you for using Norcux OS.&lt;br/&gt;This program will guide you through your first steps and&lt;br/&gt;will show you some features of the Operating System!&lt;br/&gt;&lt;br/&gt;Please choose a topic from the left side.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Thank you for using Norcux OS.&lt;br/&gt;This program will guide you through your first steps and&lt;br/&gt;show you some features of this Operating System!&lt;br/&gt;&lt;br/&gt;Please choose a topic from the left side.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
@@ -481,7 +481,7 @@
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>-137</y>
+             <y>0</y>
              <width>548</width>
              <height>623</height>
             </rect>
