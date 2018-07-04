@@ -1,7 +1,7 @@
  # Maintainer: Norcux OS Team
 
 pkgname=norcuxos-welcome-screen
-pkgver=0.1.1
+pkgver=0.1.2
 pkgrel=1
 pkgdesc="The NorcuxOS Welcome Screen"
 arch=('any')
