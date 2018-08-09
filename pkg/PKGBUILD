@@ -15,6 +15,7 @@ validpgpkeys=()
 
 
 build() {
+	mkdir -p "$srcdir/welcome-screen-$pkgver/build"
 	cd "$srcdir/welcome-screen-$pkgver/build"
 	qmake ../welcome-screen.pro -spec linux-g++ && /usr/bin/make qmake_all
 	make
