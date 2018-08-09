@@ -1,11 +1,11 @@
  # Maintainer: Norcux OS Team
 
-pkgname=norcuxos-welcome-screen
-pkgver=0.1.2
-pkgrel=1
-pkgdesc="The NorcuxOS Welcome Screen"
-arch=('any')
-url="https://github.com/NorcuxOS/welcome-screen"
+pkgname=jagudev-welcome-screen
+pkgver=0.1.6
+pkgrel=2
+pkgdesc="The JaguOS Welcome Screen"
+arch=('x86_64')
+url="https://github.com/jonasjaguar/welcome-screen"
 license=('GPL3')
 depends=('qt5-base' 'kio')
 #makedepends=()
