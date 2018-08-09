@@ -21,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent) :
     if (!(QFile::exists(QDir::homePath() + "/.config/autostart/welcome-screen.desktop"))) {
         ui->autostartCheckBox->setChecked(false);
     }
-    ui->os_logo->setPixmap(QPixmap("/usr/share/about-distro/distribution-logo.png"));
+    ui->os_logo->setPixmap(QPixmap("/usr/share/pixmaps/jaguos.png"));
 }
 
 MainWindow::~MainWindow()
@@ -45,14 +45,14 @@ void MainWindow::on_launchButton_1_released()
 void MainWindow::on_launchButton_2_released()
 {
     QProcess process;
-    process.startDetached("kioclient5 exec /usr/share/applications/software-center.desktop");
+    process.startDetached("kioclient5 exec /usr/share/applications/App.desktop");
 }
 
 //Update Manager
 void MainWindow::on_launchButton_3_released()
 {
     QProcess process;
-    process.startDetached("kioclient5 exec /usr/share/applications/update-manager.desktop");
+    process.startDetached("kioclient5 exec /usr/share/applications/App_Updates.desktop");
 }
 
 //System Settings
@@ -62,25 +62,31 @@ void MainWindow::on_launchButton_5_released()
     process.startDetached("kioclient5 exec /usr/share/applications/systemsettings.desktop");
 }
 
-//YouTube Channel
+//JaguOS Docs
 void MainWindow::on_launchButton_8_released()
 {
     QProcess process;
-    process.startDetached("kioclient5 exec https://youtube.com/channel/UCiHu1MloUXISNQ-wj3hjS1w");
+    process.startDetached("kioclient5 exec https://os.jagudev.net/videotutorials.html");
 }
 
 //Website
 void MainWindow::on_launchButton_6_released()
 {
     QProcess process;
-    process.startDetached("kioclient5 exec https://norcuxos.github.io/");
+    process.startDetached("kioclient5 exec https://jagudev.net/");
 }
 
 //Discord Chat
 void MainWindow::on_launchButton_4_released()
 {
     QProcess process;
-    process.startDetached("kioclient5 exec https://discord.gg/K2p9hf9");
+    process.startDetached("kioclient5 exec https://discord.gg/mhmERk8");
+}
+
+void MainWindow::on_launchButton_11_released()
+{
+    QProcess process;
+    process.startDetached("kioclient5 exec mailto://support@jagudev.net");
 }
 
 void MainWindow::on_autostartCheckBox_toggled(bool checked)

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Categories=System;
-Comment=The Norcux OS Welcome Screen
-Exec=/usr/bin/welcome-screen
+Comment=The JaguOS Welcome Screen
+Exec=/usr/share/welcome-screen/welcome-screen
 GenericName=Welcome Screen
 Icon=org.kde.plasma.icontasks
 Name=Welcome Screen

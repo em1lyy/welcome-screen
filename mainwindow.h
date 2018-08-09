@@ -32,6 +32,8 @@ private slots:
 
     void on_launchButton_4_released();
 
+    void on_launchButton_11_released();
+
     void on_autostartCheckBox_toggled(bool checked);
 
 private:
