@@ -1,25 +1,26 @@
- # Maintainer: Norcux OS Team
+# Maintainer: Norcux OS Team
 
 pkgname=norcuxos-welcome-screen
-pkgver=0.1.2
+pkgver=0.2
 pkgrel=1
 pkgdesc="The NorcuxOS Welcome Screen"
-arch=('any')
+arch=('x86_64')
 url="https://github.com/NorcuxOS/welcome-screen"
 license=('GPL3')
 depends=('qt5-base' 'kio')
-#makedepends=()
-#checkdepends=()
-#optdepends=()
-#options=()
-source=("${url}/archive/$pkgver.tar.gz" "${url}/releases/download/$pkgver/welcome-screen.tar.gz")
-md5sums=('SKIP' 'SKIP')
+makedepends=(gcc make)
+source=("${url}/archive/$pkgver.tar.gz")
+md5sums=('SKIP')
 validpgpkeys=()
 
 
+build() {
+	cd "$srcdir/welcome-screen-$pkgver/build"
+	qmake ../welcome-screen.pro -spec linux-g++ && /usr/bin/make qmake_all
+	make
+}
+
 package() {
-    mkdir -p ${pkgdir}/usr/bin/ ${pkgdir}/usr/share/applications/ ${pkgdir}/etc/skel/.config/autostart/
-    cp -r "${srcdir}/welcome-screen" "${pkgdir}/usr/bin/"
-    cp -r "${srcdir}/welcome-screen-${pkgver}/welcome-screen.desktop" "${pkgdir}/usr/share/applications/"
-    cp -r "${srcdir}/welcome-screen-${pkgver}/welcome-screen.desktop" "${pkgdir}/etc/skel/.config/autostart/"
+	cd "$srcdir/welcome-screen-$pkgver/build"
+	make INSTALL_ROOT="$pkgdir" install
 }

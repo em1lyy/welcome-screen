@@ -26,8 +26,6 @@ private slots:
 
     void on_launchButton_5_released();
 
-    void on_launchButton_8_released();
-
     void on_launchButton_6_released();
 
     void on_launchButton_4_released();

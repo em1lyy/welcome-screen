@@ -9,6 +9,7 @@ QT       += core gui
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = welcome-screen
+TARGET.path = $$PREFIX/
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -37,3 +38,17 @@ RESOURCES += \
     resources.qrc
 
 DISTFILES +=
+
+bin.path = $$PREFIX/usr/bin
+bin.files += welcome-screen
+
+desktop.path = $$PREFIX/usr/share/applications
+desktop.files += welcome-screen.desktop
+
+desktop-autostart.path = $$PREFIX/etc/skel/.config/autostart
+desktop-autostart.files += welcome-screen.desktop
+
+INSTALLS += \
+    bin \
+    desktop \
+    desktop-autostart \

@@ -21,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent) :
     if (!(QFile::exists(QDir::homePath() + "/.config/autostart/welcome-screen.desktop"))) {
         ui->autostartCheckBox->setChecked(false);
     }
-    ui->os_logo->setPixmap(QPixmap("/usr/share/about-distro/distribution-logo.png"));
+    ui->os_logo->setPixmap(QPixmap(":/distribution-logo.png"));
 }
 
 MainWindow::~MainWindow()
@@ -60,13 +60,6 @@ void MainWindow::on_launchButton_5_released()
 {
     QProcess process;
     process.startDetached("kioclient5 exec /usr/share/applications/systemsettings.desktop");
-}
-
-//YouTube Channel
-void MainWindow::on_launchButton_8_released()
-{
-    QProcess process;
-    process.startDetached("kioclient5 exec https://youtube.com/channel/UCiHu1MloUXISNQ-wj3hjS1w");
 }
 
 //Website
