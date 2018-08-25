@@ -1,25 +1,26 @@
  # Maintainer: Jonas Jaguar <jonasjaguar@jagudev.net>, Norcux OS Team
 
 pkgname=jagudev-welcome-screen
-pkgver=1.0
-pkgrel=2
+pkgver=1.1
+pkgrel=1
 pkgdesc="The JaguOS Welcome Screen"
 arch=('x86_64')
 url="https://github.com/jonasjaguar/welcome-screen"
 license=('GPL3')
 depends=('qt5-base' 'kio')
-#makedepends=()
-#checkdepends=()
-#optdepends=()
-#options=()
+makedepends=(gcc make)
 source=("${url}/archive/$pkgver.tar.gz")
 md5sums=('SKIP')
 validpgpkeys=()
 
 
+build() {
+	cd "$srcdir/welcome-screen-$pkgver"
+	qmake ./welcome-screen.pro -spec linux-g++ && /usr/bin/make qmake_all
+	make
+}
+
 package() {
-    mkdir -p ${pkgdir}/usr/bin/ ${pkgdir}/usr/share/applications/ ${pkgdir}/etc/skel/.config/autostart/
-    cp -r "${srcdir}/welcome-screen" "${pkgdir}/usr/bin/"
-    cp -r "${srcdir}/welcome-screen-${pkgver}/welcome-screen.desktop" "${pkgdir}/usr/share/applications/"
-    cp -r "${srcdir}/welcome-screen-${pkgver}/welcome-screen.desktop" "${pkgdir}/etc/skel/.config/autostart/"
+	cd "$srcdir/welcome-screen-$pkgver"
+	make INSTALL_ROOT="$pkgdir" install
 }
