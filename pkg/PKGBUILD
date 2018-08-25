@@ -2,7 +2,7 @@
 
 pkgname=jagudev-welcome-screen
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="The JaguOS Welcome Screen"
 arch=('x86_64')
 url="https://github.com/jonasjaguar/welcome-screen"
