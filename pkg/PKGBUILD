@@ -1,8 +1,8 @@
  # Maintainer: Jonas Jaguar <jonasjaguar@jagudev.net>, Norcux OS Team
 
 pkgname=jagudev-welcome-screen
-pkgver=0.1.6
-pkgrel=2
+pkgver=1.0
+pkgrel=1
 pkgdesc="The JaguOS Welcome Screen"
 arch=('x86_64')
 url="https://github.com/jonasjaguar/welcome-screen"
