@@ -12,8 +12,8 @@ depends=('qt5-base' 'kio')
 #checkdepends=()
 #optdepends=()
 #options=()
-source=("${url}/archive/$pkgver.tar.gz" "${url}/releases/download/$pkgver/welcome-screen.tar.gz")
-md5sums=('SKIP' 'SKIP')
+source=("${url}/archive/$pkgver.tar.gz")
+md5sums=('SKIP')
 validpgpkeys=()
 
 
